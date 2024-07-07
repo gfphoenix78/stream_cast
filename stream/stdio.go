@@ -7,16 +7,16 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-func lookupStdin(node *yaml.Node) (io.ReadCloser, error) {
+func std_input(node *yaml.Node) (io.ReadCloser, error) {
 	check_type(node, "stdin")
 	return os.Stdin, nil
 }
-func lookupStdout(node *yaml.Node) (io.WriteCloser, error) {
+func std_output(node *yaml.Node) (io.WriteCloser, error) {
 	check_type(node, "stdout")
 	return os.Stdout, nil
 }
 
 func init() {
-	RegisterInputStream("stdin", lookupStdin)
-	RegisterOutputStream("stdout", lookupStdout)
+	RegisterInputStream("stdin", std_input)
+	RegisterOutputStream("stdout", std_output)
 }

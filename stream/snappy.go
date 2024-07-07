@@ -14,7 +14,6 @@ func snappy_decoder(node *yaml.Node, r io.ReadCloser) (io.ReadCloser, error) {
 
 func snappy_encoder(node *yaml.Node, w io.WriteCloser) (io.WriteCloser, error) {
 	check_type(node, "zlib")
-
 	return snappy.NewBufferedWriter(w), nil
 }
 

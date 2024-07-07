@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 
-	stream "github.com/gfphoenix78/stream_cast/v2"
+	"github.com/gfphoenix78/stream_cast/stream"
 )
 
 var yaml_file string

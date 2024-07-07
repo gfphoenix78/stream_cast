@@ -16,7 +16,6 @@ func zlib_decoder(node *yaml.Node, r io.ReadCloser) (io.ReadCloser, error) {
 
 func zlib_encoder(node *yaml.Node, w io.WriteCloser) (io.WriteCloser, error) {
 	check_type(node, "zlib")
-
 	return zlib.NewWriterLevel(w, zlib.DefaultCompression)
 }
 
